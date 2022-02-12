@@ -1,0 +1,43 @@
+.flex{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper{
+    border: 2px solid black;
+    padding:  50px;
+    padding-top: 10px; 
+    border-radius: 5px;
+}
+.inputname{
+    width: 350px;
+    padding:10px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: large;
+    margin: 10px;
+}
+.title{
+    text-align: center;
+}
+
+.btn{
+    
+    padding: 8px 40px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn:active{
+    background-color: black;
+    color: white;
+}

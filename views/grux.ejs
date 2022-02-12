@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/sitebar.css">
+    <link rel="stylesheet" href="../assets/css/student.css">
+</head>
+
+<body>
+    <div class="home">
+        <div id="wrapper">
+            <div id="sitebar-wrapper">
+                <h1 class="titleHome">Gruglar</h1>
+                <ul id="sidebar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/students">Talabalar</a></li>
+                    <li><a href="/teachers">Ustozlar</a></li>
+                    <li><a href="/grux">Gruglar</a></li>
+                    <li><a href="/curs">Kurslar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="century">
+                <div class="student-header">
+                    <h1 class="student-title">Gruhlar</h1>
+                    <form id="openform">
+                        <button id="studentbtn">Add Gruxlar</button>
+                    </form>
+                </div>
+                <% for (const i of allgrux){%>
+                <h3 id="text">New grux <%=i.gruxname%> </h3>
+                <% }%>
+                <div id="wrapperS" class="student-wrapper">
+                    <div class="addstudent">
+                        <h1>Add new teacher</h1>
+                        <form id="closeform">
+                            <button>close</button>
+                        </form>
+                    </div>
+                    <form id="form" action="http://localhost:4444/grux" method="post">
+                        <input class="input" required name="gruxname" type="text" placeholder="gtuxning nomi"><br>
+                        <select class="input" required name="gruxteacher">
+                            <option disabled selected>teachers </option>
+                            <% for (const i of allteacher){%>
+                            <option><%=i.username%></option>
+                            <% }%>
+                        </select><br>
+                        <input class="input" name="gruxstart" type="date"><br>
+                        <select class="input" required name="gruxyonalish">
+                            <option disabled selected>grux yonalishi</option>
+                            <% for (const i of allcurs){%>
+                            <option><%=i.curs%></option>
+                            <% }%>
+                        </select><br>
+                        <button class="btn">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    openform.addEventListener('submit', function (e) {
+        e.preventDefault();
+        wrapperS.classList.add("disabledfle")
+    });
+    closeform.addEventListener('submit', function (e) {
+        e.preventDefault();
+        wrapperS.classList.remove("disabledfle")
+    });
+</script>
+
+
+</html>

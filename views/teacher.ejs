@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/sitebar.css">
+    <link rel="stylesheet" href="../assets/css/student.css">
+</head>
+
+<body>
+    <div class="home">
+        <div id="wrapper">
+            <div id="sitebar-wrapper">
+                <h1 class="titleHome">Teachers page</h1>
+                <ul id="sidebar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/students">Talabalar</a></li>
+                    <li><a href="/teachers">Ustozlar</a></li>
+                    <li><a href="/grux">Gruglar</a></li>
+                    <li><a href="/curs">Kurslar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="century">
+                <div class="student-header">
+                    <h1 class="student-title">Teachers</h1>
+                    <form id="openform">
+                        <button id="studentbtn">Add Teachers</button>
+                    </form>
+                </div>
+                <hr>
+                <div class="main-top">
+                    <span class="main-top-span">id</span>
+                    <span class="main-top-span">name</span>
+                    <span class="main-top-span">telefon</span>
+                    <span class="main-top-span">Curs</span>
+                </div>
+                <% for (const i of allteacher){%>
+                <div class="main-top">
+                    <span><%=i.id%></span>
+                    <span><%=i.username%></span>
+                    <span><%=i.phonenumber%></span>
+                    <span><%=i.cursname%></span>
+                </div>
+                <% }%>
+            </div>
+            <div id="wrapperS" class="student-wrapper">
+                <div class="addstudent">
+                    <h1>Add new teacher</h1>
+                    <form id="closeform">
+                        <button>close</button>
+                    </form>
+                </div>
+                <form id="form" action="http://localhost:4444/teachers" method="post">
+                    <input class="input" name="phonenumber" type="number" placeholder="phone number" required><br>
+                    <input class="input" name="username" type="text" placeholder="name" required><br>
+                    <input class="input" name="birthday" type="date" required><br>
+                    <label>
+                        <span>erkak</span>
+                        <input type="radio" name="erkakAyol" value="erkak" required>
+                    </label>
+                    <label>
+                        <span>ayol</span>
+                        <input type="radio" name="erkakAyol" value="ayol" required>
+                    </label> <br>
+                    <input class="input ivip" name="telegram" type="text" placeholder="telgram"><br>
+                    <select class="input" name="cursname">
+                        <option disabled selected>cursname</option>
+                        <% for (const i of allcurs){%>
+                        <option><%=i.curs%></option>
+                        <% }%>
+                    </select><br>
+                    <button class="btn">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    openform.addEventListener('submit', function (e) {
+        e.preventDefault();
+        wrapperS.classList.add("disabledfle")
+    });
+    closeform.addEventListener('submit', function (e) {
+        e.preventDefault();
+        wrapperS.classList.remove("disabledfle")
+    });
+</script>
+
+</html>

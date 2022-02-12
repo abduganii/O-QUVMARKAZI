@@ -1,0 +1,54 @@
+
+.none{
+    display: none;
+}
+
+.felxwidth{
+    width: 0px;
+}
+#sidebar-nav{
+    list-style: none;
+    padding: 0;
+}
+a{
+    display: inline-block;
+    padding:20px;
+   text-decoration: none;
+   color: black;
+}
+li{
+    border-bottom: 2px solid black;
+}
+.titleHome{
+    padding-left:20px ;
+}
+.home{
+    display: flex;
+    width: 1510px;
+    margin: 0 auto;
+}
+#wrapper{
+    border: 3px solid black;
+    height: 98vh;
+    padding-top: 20px;
+    width: 400px;
+    box-sizing: border-box;
+}
+li:hover{
+    background-color: rgb(247, 244, 244);
+}
+li:active{
+    background-color: black;
+}
+li:active a{
+    color: white;
+}
+.content{
+    padding: 0 20px;
+}
+.textflex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}

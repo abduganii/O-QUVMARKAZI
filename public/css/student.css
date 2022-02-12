@@ -1,0 +1,70 @@
+.student-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content{
+    padding: 0 30px;
+    width: 100%;
+    
+}
+#studentbtn{
+    padding: 10px 40px;
+    border-radius:10px ;
+    background-color: white;
+    margin-right:100px ;
+}
+.main-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 150px;
+}
+.main-top-span{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.student-wrapper{
+    display: none;
+    background-color: white;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 98vh;
+    border-left: 1px solid black;
+}
+.addstudent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input{
+    padding: 15px 5px;
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.ivip{
+    margin-top: 10px;
+}
+.btn{
+    
+    padding: 8px 40px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn:active{
+    background-color: black;
+    color: white;
+}
+.disabledfle{
+    display: block;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/sitebar.css">
+    <link rel="stylesheet" href="../assets/css/student.css">
+</head>
+
+<body>
+    <div class="home">
+        <div id="wrapper">
+            <div id="sitebar-wrapper">
+                <h1 class="titleHome">Kurslar</h1>
+                <ul id="sidebar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/students">Talabalar</a></li>
+                    <li><a href="/teachers">Ustozlar</a></li>
+                    <li><a href="/grux">Gruglar</a></li>
+                    <li><a href="/curs">Kurslar</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <form action="http://localhost:4444/curs" method="post">
+                <input class="input" required name="curs" type="text" placeholder="curs nomi">
+                <button class="btn">submit</button>
+            </form>
+
+            <hr>
+            <% for (const i of allcurs){%>
+            <h1 id="text">new <%=i.curs%> </h1>
+            <% }%>
+        </div>
+    </div>
+</body>
+
+</html>

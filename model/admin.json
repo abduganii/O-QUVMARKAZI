@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "username":"Man",
+        "password":"99wew88",
+        "phonenumber":"+998999990099",
+        "cotegoriId":1
+    },
+    {
+        "id":2,
+        "username":"Siz",
+        "password":"99sia88",
+        "phonenumber":"+998999332339",
+        "cotegoriId":1
+    }
+]
